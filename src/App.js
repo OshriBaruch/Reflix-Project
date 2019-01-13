@@ -30,14 +30,19 @@ class App extends Component {
     let movies = this.state.movies
     let users = this.state.users
 
-    users.find(u => u.name === name).budget - 3 > 0 ?
-      movies[id].isRented = !movies[id].isRented :
+    if (users.find(u => u.name === name).budget > 3 || movies[id].isRented) 
+    {
+      movies[id].isRented = !movies[id].isRented
+      movies[id].isRented ?
+        users.find(u => u.name === name).budget -= 3 :
+        users.find(u => u.name === name).budget += 3
+    } 
+    else 
+    {
       alert(`There's not enough money, you're missing ${3 - users.find(u => u.name === name).budget}$`)
-    movies[id].isRented ?
-      users.find(u => u.name === name).budget -= 3 :
-      users.find(u => u.name === name).budget += 3
 
-    this.setState({ movies: movies, users: users })
+      }
+      this.setState({ movies: movies, users: users })
   }
   updateText = (text) => {
     let value = this.state.text
