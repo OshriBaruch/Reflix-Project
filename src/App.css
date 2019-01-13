@@ -1,0 +1,78 @@
+*{
+  text-decoration: none;
+  font-family: 'Cinzel Decorative';
+  margin: 0;
+}
+#root{
+  margin: 0;
+}
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
+}
+#main-links {
+  display: inline-block;
+  color: #34495e;
+  text-shadow: -1px -1px 0 #ecf0f1, 1px -1px 0 #ecf0f1, -1px 1px 0 #ecf0f1, 1px 1px 0 #ecf0f1;
+}
+#movies-menu{
+  display:grid;
+  height: 90vh;
+  grid-template-rows: repeat(10,1fr);
+}
+input{
+  width: 15vw;
+}
+.movies-input{
+  padding-top: 1%;
+  grid-row: 1;
+  grid-column: 1;
+  justify-self:start;
+}
+.movies-user-budget{
+  grid-column: 2;
+  grid-row: 1;
+  justify-self:end;
+}
+.movies-rented{
+  grid-row: 2 / 5;
+}
+.movies-search{
+  grid-row: 7 / 10;
+}
+
+input{
+  background-color: rgb(43, 38, 38);
+  color: rgb(70, 70, 70);
+  bottom: 0;
+}
+.movie-box{
+  margin-right: 1%;
+  display: inline-block;
+  position: relative;
+}
+img{
+  margin-top: 10%;
+  height: 30vh;
+  width: 13vw;
+  border: 1px solid rgb(31, 27, 27);
+}
+.sing{
+  position: absolute;
+  right: 3%;
+  top: 10%;
+}
+.users{
+  height: 20vh;
+  width: 15vw;
+  color: beige;
+  margin: 3%;
+  padding-top: 10%;
+  border: 5px solid rgb(31, 27, 27);
+  display: inline-block;
+}
+.users > span{
+  padding-left: 30%
+}
